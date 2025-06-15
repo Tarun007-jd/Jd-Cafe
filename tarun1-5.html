@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Coffee Order JD Cafe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f5f5dc;
+      color: #6b7280;
+      font-size: 18px;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    .about-image {
+       flex: 1;
+       min-width: 300px;
+        }
+        .form { 
+          text-align: center;
+        }
+    .about-image img {
+       width: 20%;
+       border-radius: 10px;
+       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+      .center{
+        flex:1;
+        min-width: 300px;
+        }
+      .center img{
+        display: block;
+        border-radius: 12px;
+        margin-left:auto;
+        margin-right: auto;
+         width:20%;
+      }
+      a {
+       color: inherit;
+       transition: color 0.3s ease;
+       text-decoration: none;
+      }
+      a:hover,
+      a:focus-visible {
+       color: #111827;
+      }
+    .logo {
+      font-family:'Times New Roman', Times, serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary);
+     }
+    .container {
+      color:white;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    header {
+      position: static;
+      text-decoration: none;
+      background: #6f4e37;
+      z-index: 1000;
+      border-radius: 12px;
+      box-shadow: 0 1px 2px rgb(0 0 0 / 0.05);
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 60px;
+    }
+    .nav-links {
+      display: flex;
+      gap: 24px;
+    }
+    .nav-links a {
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 4px 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s ease;
+    }
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      border-color: blanchedalmond;
+      color: #f5f5dc;
+    }
+    .hero {
+      padding-top: 96px;
+      padding-bottom: 96px;
+      text-align: center;
+      color: #111827;
+    }
+    .hero h1 {
+      color: #6f4e37;
+      font-size: 4rem;
+      font-weight: 800;
+      line-height: 1.1;
+      max-width: 700px;
+      margin: 0 auto 24px auto;
+    }
+    .hero p {
+      font-size: 1.25rem;
+      max-width: 520px;
+      margin: 0 auto 48px auto;
+      color: #374151;
+    }
+    .btn-primary {
+      background-color: #111827;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 1.125rem;
+      padding: 16px 48px;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgb(17 24 39 / 0.3);
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .btn-primary:hover,
+    .btn-primary:focus-visible {
+      background-color: rgb(228, 174, 38) ;
+      outline: none;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px goldenrod;
+    }
+    section {
+      padding-top: 64px;
+      padding-bottom: 80px;
+    }
+    section:not(:last-of-type) {
+      border-bottom: 1px solid #e5e7eb;
+    }
+    h2.section-title {
+      color: #111827;
+      font-weight: 700;
+      font-size: 2.5rem;
+      margin-bottom: 32px;
+      text-align: center;
+    }
+    .about-text {
+      text-align: center;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 1.125rem;
+      color: #6f4e37;
+      line-height: 1.7;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .feature-card {
+      background-color: rgb(210, 173, 80);
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgb(0 0 0 / 0.07);
+      padding: 32px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+    .feature-card:hover,
+    .feature-card:focus-within {
+      box-shadow: 0 8px 20px rgb(0 0 0 / 0.12);
+      transform: translateY(-6px);
+      outline: none;
+    }
+    .feature-title {
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: black;
+      margin-bottom: 12px;
+    }
+    .feature-desc {
+      font-size: 1rem;
+      color: #f5f5dc;
+      line-height: 1.5;
+    }
+    .contact {
+       align-items: center;
+    }
+    .contact-form {
+      text-align: center;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .contact-info {
+      color: gray;
+    }
+    label {
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 8px;
+      color: #374151;
+    }
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      border: 1.5px solid #d1d5db;
+      border-radius: 12px;
+      padding: 12px 16px;
+      font-size: 1rem;
+      color: #111827;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      font-family: 'Inter', sans-serif;
+      resize: vertical;
+      min-height: 44px;
+    }
+    textarea {
+      min-height: 120px;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    select:focus,
+    textarea:focus {
+      border-color: #8b5cf6;
+      box-shadow: 0 0 8px rgb(139 92 246 / 0.5);
+    }
+    .bold{
+      text-align: center;
+      color:#6f4e37;
+    }
+    .submit-btn {
+      align-self: flex-start;
+      background-color: #111827;
+      color: #ffffff;
+      padding: 14px 48px;
+      font-weight: 700;
+      font-size: 1.125rem;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      box-shadow: 0 4px 14px rgb(17 24 39 / 0.3);
+    }
+    .submit-btn:hover:not(:disabled),
+    .submit-btn:focus-visible:not(:disabled) {
+      background-color: rgb(228, 174, 38);
+      transform: translateY(-3px);
+      outline: none;
+      box-shadow: 0 10px 30px grey;
+    }
+    footer {
+      border: #6f4e37;
+      background-color: #6f4e37;
+            color: black;
+            text-align: center;
+            padding: 2rem;
+      }
+    @media (max-width: 640px) {
+      .hero h1 {
+        font-size: 2.5rem;
+        padding: 0 8px;
+      }
+      .section-title {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container" role="banner">
+      <nav aria-label="Primary navigation" role="navigation">
+        <a href="#home" class="logo">JD Cafe</a>
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#features">Features</a>
+          <a href="#contact">Order</a>
+          <a href="#contacts">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <h1 >Order Your Perfect Cup of Coffee</h1>
+      <div class="about-image">
+        <img src="https://static.vecteezy.com/system/resources/previews/009/224/874/non_2x/simple-coffee-cup-for-the-hot-drink-menu-in-the-cafe-vector.jpg" ></div>
+      <p>Freshly made coffee delivered right to your door. Choose your favorite blends and customize your order easily.</p>
+      <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Order Now</button>
+     </section>
+
+    <section id="about" aria-labelledby="about-title">
+      <h2 class="section-title" id="about-title">About JD Cafe</h2><div>
+        <div class="center" >
+      <img src="https://tse1.mm.bing.net/th?id=OIP.bHmvoPegcEVZgqT0uuQA7gHaHa&pid=Api&P=0&h=180" ></div>
+      <p class="about-text">At JD cafe, we believe that great coffee starts with the finest beans and ends with the perfect brew. Our mission is to bring you exceptional coffee that awakens your senses and fuels your day. Whether you're a casual drinker or a coffee connoisseur, we have something for everyone.
+        At JD Café, we believe great coffee starts with great beans and a passion for perfection.Our specialty brews are crafted from ethically sourced beans, roasted fresh, and served with care.   
+        <b><br>Sip. Smile. Stay awhile.</b><br>
+      </p>
+      <h2 class="bold" id="bold">Handcrafted Curations</h2>
+    </section>
+
+    <section id="features" aria-labelledby="features-title">
+      <h2 class="section-title" id="features-title">Why To Choose Us</h2>
+      <div class="features-grid">
+        <article class="feature-card" aria-describedby="feature1-desc">
+          <h3 class="feature-title">Freshly Roasted Beans</h3>
+          <p class="feature-desc" id="feature1-desc">We source and roast our beans locally to ensure each cup bursts with flavor and aroma.</p>
+        </article>
+        <article class="feature-card" aria-describedby="feature2-desc">
+          <h3 class="feature-title">Customizable Orders</h3>
+          <p class="feature-desc" id="feature2-desc">Choose from a variety of blends, milk options, and sweeteners to craft your ideal drink.</p>
+        </article>
+        <article class="feature-card" aria-describedby="feature3-desc">
+          <h3 class="feature-title">Sustainable & Ethical</h3>
+          <p class="feature-desc" id="feature3-desc">We partner with farms that prioritize sustainability, fair wages, and eco-friendly practices.</p>
+        </article>
+        <article class="feature-card" aria-describedby="feature4-desc">
+          <h3 class="feature-title">Rich in flavour</h3>
+          <p class="feature-desc" id="feature3-desc">Bold and intense, every bite tells a story.Layers of taste unfold with each moment.An unforgettable burst of flavour in every mouthful.</p>
+        </article>
+         <article class="feature-card" aria-describedby="feature5-desc">
+          <h3 class="feature-title">No Extra Charge</h3>
+          <p class="feature-desc" id="feature3-desc">Customize your drink with your favorite nondairy milk-like soy, coconut, almond or oat-for no additional charge.</p>
+        </article>
+        <article class="feature-card" aria-describedby="feature6-desc">
+          <h3 class="feature-title">Eco-friendly Package</h3>
+          <p class="feature-desc" id="feature3-desc">Every cup tells a story—not just of rich flavor and bold aroma, but of conscious choices. We proudly serve all our beverages and treats in eco-friendly, compostable packaging.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 class="section-title" id="contact-title">Login & Order</h2>
+      
+      <form class="contact-form" novalidate aria-live="polite"> 
+        <div>
+          <label for="name"><span>*</span>Name</label>
+          <div>
+          <input type="text" id="name" name="name" placeholder="Name" />
+          </div>
+          <div>
+            <label for="email"><span>*</span>Email</label>
+            <div>
+          <input type="email" id="email" placeholder="Email" name="email"/>
+        <div></div>
+          <label for="coffee"><span>*</span>Coffee Choice</label>
+          <div>
+          <select id="coffee" name="coffee">
+            <option value="">select your flavour</option>
+            <option value="black coffee">Black Coffee</option>
+            <option value="cold coffee">Cold Coffee</option>
+            <option value="latte">Latte</option>
+            <option value="frappe">Frappe</option>
+            <option value="cappuccino">Cappuccino(bestseller)</option>
+            <option value="iced coffee">Iced Coffee</option>
+            <option value="coldbrew">Cold Brew</option>
+          </select>
+        </div>
+      </div>
+    <div>
+          <label for="message">Additional customize</label>
+          <div>
+          <textarea id="message" name="message" placeholder="Any preferences or special requests?"></textarea>
+        </div></div>
+        <button type="submit" class="submit-btn" >Submit Order</button>
+      </form>
+    </section>
+
+    <section id="contacts">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact-form" >
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <div class="info-item"></div>
+                    <p>Lulu Mall, Pollachi Main Road, Coimbatore-041</p>
+                <div class="info-item"></div>
+                    <p>+91 9442517987</p>
+                <div class="info-item"></div>
+                    <p>jdcafeofficial@gmail.com</p>
+                <div class="info-item"></div>
+                    <p>@jdcafe_insta</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+       <div id="footer">
+        @2025 copyrights jdcafeofficial. All rights reserved.
+       </div></footer>
+  </main>
+</body>
+</html>
