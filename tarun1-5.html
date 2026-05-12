@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JD Cafe - Premium Coffee Experience</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="loader">
+    <div class="loader-spinner"></div>
+  </div>
+
+  <header class="site-header" id="site-header">
+    <div class="container">
+      <nav aria-label="Primary navigation">
+        <a href="#home" class="logo">JD <span>Cafe</span></a>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+        <ul class="nav-links">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#order" class="nav-cta">Order Now</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="home" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="container">
+        <h1 class="reveal">Your Perfect Cup <br/>Starts Here</h1>
+        <p class="reveal-delay-1">Freshly roasted, ethically sourced, and crafted with passion.</p>
+        <div class="hero-buttons reveal-delay-2">
+          <a href="#menu" class="btn-primary">Explore Menu</a>
+          <a href="#order" class="btn-secondary">Order Online</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-image reveal">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600" alt="Barista pouring latte art" />
+          </div>
+          <div class="about-content reveal-delay-1">
+            <span class="section-tag">Our Story</span>
+            <h2 class="section-title" id="about-title">The Art of <span>Perfect Coffee</span></h2>
+            <p>At JD Cafe, we believe great coffee starts with great beans and a passion for perfection. Our specialty brews are crafted from ethically sourced beans, roasted fresh in small batches, and served with care.</p>
+            <p>Every cup we serve tells a story — of farmers who nurture their crops, of roasters who perfect their craft, and of baristas who transform beans into liquid art.</p>
+            <div class="about-stats">
+              <div class="stat">
+                <span class="stat-number" data-count="8">0</span>
+                <span class="stat-label">Years Serving</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number" data-count="15">0</span>
+                <span class="stat-label">Coffee Varieties</span>
+              </div>
+              <div class="stat">
+                <span class="stat-number" data-count="12">0</span>
+                <span class="stat-label">Awards Won</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu -->
+    <section id="menu" aria-labelledby="menu-title" class="section-dark">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag light">Our Menu</span>
+          <h2 class="section-title light" id="menu-title">Crafted <span>With Love</span></h2>
+          <p class="section-desc">From classic espresso to signature creations, every drink is made to order.</p>
+        </div>
+        <div class="menu-tabs">
+          <button class="menu-tab active" data-category="coffee">Coffee</button>
+          <button class="menu-tab" data-category="special">Special</button>
+          <button class="menu-tab" data-category="cold">Cold Brews</button>
+          <button class="menu-tab" data-category="snacks">Snacks</button>
+        </div>
+        <div class="menu-grid" id="menu-grid">
+          <div class="menu-item" data-category="coffee">
+            <div class="menu-img"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=200" alt="Espresso" /></div>
+            <div class="menu-info">
+              <div class="menu-header"><h3>Classic Espresso</h3><span class="menu-price">&#8377;149</span></div>
+              <p>Rich, bold single-origin espresso shot</p>
+            </div>
+          </div>
+          <div class="menu-item" data-category="coffee">
+            <div class="menu-img"><img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=200" alt="Cappuccino" /></div>
+            <div class="menu-info">
+              <div class="menu-header"><h3>Cappuccino</h3><span class="menu-price">&#8377;249</span></div>
+              <p>Espresso with steamed milk and thick foam</p>
+            </div>
+          </div>
+          <div class="menu-item" data-category="coffee">
+            <div class="menu-img"><img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?w=200" alt="Latte" /></div>
+            <div class="menu-info">
+              <div class="menu-header"><h3>Cafe Latte</h3><span class="menu-price">&#8377;279</span></div>
+              <p>Smooth espresso with silky steamed milk</p>
+            </div>
+          </div>
+          <div class="menu-item" data-category="special">
+            <div class="menu-img"><img src="https://images.unsplash.com/photo-1504630083234-14187a9df0f5?w=200" alt="Caramel Macchiato" /></div>
+            <div class="menu-info">
+              <div class="menu-header"><h3>Caramel Macchiato</h3><span class="menu-price">&#8377;329</span></div>
+              <p>Vanilla steamed milk with espresso and caramel</p>
+            </div>
+          </div>
+          <div class="menu-item" data-category="special">
+            <div class="menu-img"><img src="https://images.unsplash.com/photo-1485808191679-5f86510681a2?w=200" alt="Mocha" /></div>
+            <div class="menu-info">
+              <div class="menu-header"><h3>Hazelnut Mocha</h3><span class="menu-price">&#8377;349</span></div>
+              <p>Rich chocolate, hazelnut, and espresso</p>
+            </div>
+          </div>
+          <div class="menu-item" data-category="special">
+            <div class="menu-img"><img src="https://images.unsplash.com/photo-1485808191679-5f86510681a2?w=200" alt="Signature Blend" /></div>
+            <div class="menu-info">
+              <div class="menu-header"><h3>Signature Bliss</h3><span class="menu-price">&#8377;379</span></div>
+              <p>Our signature blend with hints of caramel &amp; vanilla</p>
+            </div>
+          </div>
+          <div class="menu-item" data-category="cold">
+            <div class="menu-img"><img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=200" alt="Cold Brew" /></div>
+            <div class="menu-info">
+              <div class="menu-header"><h3>Cold Brew</h3><span class="menu-price">&#8377;229</span></div>
+              <p>Slow-steeped 16 hours for smooth richness</p>
+            </div>
+          </div>
+          <div class="menu-item" data-category="cold">
+            <div class="menu-img"><img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=200" alt="Iced Latte" /></div>
+            <div class="menu-info">
+              <div class="menu-header"><h3>Iced Latte</h3><span class="menu-price">&#8377;259</span></div>
+              <p>Chilled espresso over milk with ice</p>
+            </div>
+          </div>
+          <div class="menu-item" data-category="cold">
+            <div class="menu-img"><img src="https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=200" alt="Frappe" /></div>
+            <div class="menu-info">
+              <div class="menu-header"><h3>Frappe</h3><span class="menu-price">&#8377;299</span></div>
+              <p>Blended iced coffee with whipped cream</p>
+            </div>
+          </div>
+          <div class="menu-item" data-category="snacks">
+            <div class="menu-img"><img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=200" alt="Croissant" /></div>
+            <div class="menu-info">
+              <div class="menu-header"><h3>Butter Croissant</h3><span class="menu-price">&#8377;149</span></div>
+              <p>Flaky, golden-baked French pastry</p>
+            </div>
+          </div>
+          <div class="menu-item" data-category="snacks">
+            <div class="menu-img"><img src="https://images.unsplash.com/photo-1509365465985-25d11c17e812?w=200" alt="Muffin" /></div>
+            <div class="menu-info">
+              <div class="menu-header"><h3>Blueberry Muffin</h3><span class="menu-price">&#8377;129</span></div>
+              <p>Freshly baked with wild blueberries</p>
+            </div>
+          </div>
+          <div class="menu-item" data-category="snacks">
+            <div class="menu-img"><img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=200" alt="Chocolate Cookie" /></div>
+            <div class="menu-info">
+              <div class="menu-header"><h3>Chocolate Cookie</h3><span class="menu-price">&#8377;99</span></div>
+              <p>Double chocolate chip, baked fresh daily</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" aria-labelledby="features-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Why Choose Us</span>
+          <h2 class="section-title" id="features-title">The JD <span>Difference</span></h2>
+        </div>
+        <div class="features-grid">
+          <article class="feature-card reveal">
+            <div class="feature-icon"><img src="https://cdn-icons-png.flaticon.com/64/924/924514.png" alt="" /></div>
+            <h3>Freshly Roasted Beans</h3>
+            <p>Small-batch roasted within 48 hours of your order for peak flavour.</p>
+          </article>
+          <article class="feature-card reveal-delay-1">
+            <div class="feature-icon"><img src="https://cdn-icons-png.flaticon.com/64/3113/3113018.png" alt="" /></div>
+            <h3>Customize Every Sip</h3>
+            <p>Choose your milk, sweetness level, and extra shots — your perfect cup awaits.</p>
+          </article>
+          <article class="feature-card reveal-delay-2">
+            <div class="feature-icon"><img src="https://cdn-icons-png.flaticon.com/64/4149/4149650.png" alt="" /></div>
+            <h3>Sustainable &amp; Ethical</h3>
+            <p>Direct trade partnerships with farms ensuring fair wages and eco-friendly practices.</p>
+          </article>
+          <article class="feature-card reveal-delay-1">
+            <div class="feature-icon"><img src="https://cdn-icons-png.flaticon.com/64/3126/3126641.png" alt="" /></div>
+            <h3>Free Customizations</h3>
+            <p>Oat, soy, almond, or coconut milk at no extra charge — because you deserve choices.</p>
+          </article>
+          <article class="feature-card reveal-delay-2">
+            <div class="feature-icon"><img src="https://cdn-icons-png.flaticon.com/64/3004/3004481.png" alt="" /></div>
+            <h3>Eco-Friendly Packaging</h3>
+            <p>100% compostable cups, lids, and packaging — good for you, good for the planet.</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon"><img src="https://cdn-icons-png.flaticon.com/64/7656/7656139.png" alt="" /></div>
+            <h3>Loyalty Rewards</h3>
+            <p>Earn points on every purchase and redeem for free drinks, discounts, and merch.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" aria-labelledby="testimonials-title" class="section-dark">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag light">Testimonials</span>
+          <h2 class="section-title light" id="testimonials-title">What Our <span>Customers Say</span></h2>
+        </div>
+        <div class="testimonials-grid">
+          <blockquote class="testimonial-card reveal">
+            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p>"The best cold brew I've ever had! Smooth, rich, and absolutely delicious. The atmosphere is amazing too."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="background:#6f4e37;">P</div>
+              <div><cite>Priya Sharma</cite><span>Regular Customer</span></div>
+            </div>
+          </blockquote>
+          <blockquote class="testimonial-card reveal-delay-1">
+            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p>"JD Cafe is my go-to workspace. Great coffee, free WiFi, and the staff always remembers my order. Love it!"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="background:#e4ae26;">R</div>
+              <div><cite>Rahul Patel</cite><span>Freelancer</span></div>
+            </div>
+          </blockquote>
+          <blockquote class="testimonial-card reveal-delay-2">
+            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p>"Their hazelnut mocha is life-changing. The eco-friendly packaging is a huge plus. 10/10 recommend!"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar" style="background:#374151;">A</div>
+              <div><cite>Ananya Gupta</cite><span>Coffee Enthusiast</span></div>
+            </div>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" aria-labelledby="gallery-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Gallery</span>
+          <h2 class="section-title" id="gallery-title">Moments at <span>JD Cafe</span></h2>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item gallery-item--wide reveal"><img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=600" alt="Cafe interior" /></div>
+          <div class="gallery-item reveal-delay-1"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400" alt="Latte art" /></div>
+          <div class="gallery-item reveal-delay-1"><img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=400" alt="Coffee beans" /></div>
+          <div class="gallery-item reveal-delay-2"><img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=400" alt="Roasted coffee" /></div>
+          <div class="gallery-item gallery-item--wide reveal-delay-2"><img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=600" alt="Coffee shop ambiance" /></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Order -->
+    <section id="order" aria-labelledby="order-title" class="section-dark">
+      <div class="container">
+        <div class="order-wrapper">
+          <div class="order-info reveal">
+            <span class="section-tag light">Order Online</span>
+            <h2 class="section-title light" id="order-title">Reserve Your <span>Coffee</span></h2>
+            <p class="order-desc">Skip the line. Pre-order your favourite brew and we'll have it ready when you arrive.</p>
+            <div class="order-benefits">
+              <div class="benefit"><span>&#9989;</span> Quick &amp; Easy</div>
+              <div class="benefit"><span>&#9989;</span> No Waiting in Line</div>
+              <div class="benefit"><span>&#9989;</span> Customize Your Drink</div>
+              <div class="benefit"><span>&#9989;</span> Earn Loyalty Points</div>
+            </div>
+          </div>
+          <form class="order-form reveal-delay-1" action="#" method="post" novalidate>
+            <h3>Place Your Order</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name <span class="required">*</span></label>
+                <input type="text" id="name" name="name" placeholder="Your name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email <span class="required">*</span></label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="text" id="phone" name="phone" placeholder="+91 9XXXXXXXX" />
+              </div>
+              <div class="form-group">
+                <label for="coffee">Coffee Choice <span class="required">*</span></label>
+                <select id="coffee" name="coffee" required>
+                  <option value="">Select your drink</option>
+                  <option value="espresso">Classic Espresso - &#8377;149</option>
+                  <option value="cappuccino">Cappuccino - &#8377;249</option>
+                  <option value="latte">Cafe Latte - &#8377;279</option>
+                  <option value="caramel">Caramel Macchiato - &#8377;329</option>
+                  <option value="mocha">Hazelnut Mocha - &#8377;349</option>
+                  <option value="signature">Signature Bliss - &#8377;379</option>
+                  <option value="coldbrew">Cold Brew - &#8377;229</option>
+                  <option value="icedlatte">Iced Latte - &#8377;259</option>
+                  <option value="frappe">Frappe - &#8377;299</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="message">Special Requests</label>
+              <textarea id="message" name="message" placeholder="Milk preference, sweetness level, extra shots..."></textarea>
+            </div>
+            <div class="form-group">
+              <label for="pickup">Pickup Time</label>
+              <select id="pickup" name="pickup">
+                <option value="asap">As soon as possible</option>
+                <option value="15">In 15 minutes</option>
+                <option value="30">In 30 minutes</option>
+                <option value="60">In 1 hour</option>
+              </select>
+            </div>
+            <button type="submit" class="submit-btn">Place Order &#10140;</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Get in Touch</span>
+          <h2 class="section-title" id="contact-title">Visit <span>JD Cafe</span></h2>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-card reveal">
+            <div class="contact-card-icon">&#128205;</div>
+            <h3>Visit Us</h3>
+            <p>Lulu Mall, Pollachi Main Road<br />Coimbatore - 641041</p>
+            <a href="https://maps.google.com/?q=Lulu+Mall+Coimbatore" target="_blank" class="contact-link">View on Map &#8599;</a>
+          </div>
+          <div class="contact-card reveal-delay-1">
+            <div class="contact-card-icon">&#128337;</div>
+            <h3>Opening Hours</h3>
+            <div class="hours">
+              <div class="hours-row"><span>Mon - Fri</span><span>7:00 AM - 10:00 PM</span></div>
+              <div class="hours-row"><span>Saturday</span><span>8:00 AM - 11:00 PM</span></div>
+              <div class="hours-row"><span>Sunday</span><span>9:00 AM - 9:00 PM</span></div>
+            </div>
+          </div>
+          <div class="contact-card reveal-delay-2">
+            <div class="contact-card-icon">&#128222;</div>
+            <h3>Contact Info</h3>
+            <p>+91 94425 17987</p>
+            <p>jdcafeofficial@gmail.com</p>
+            <div class="social-links">
+              <a href="#" aria-label="Instagram" class="social-link">IG</a>
+              <a href="#" aria-label="Facebook" class="social-link">FB</a>
+              <a href="#" aria-label="Twitter" class="social-link">Tw</a>
+              <a href="#" aria-label="YouTube" class="social-link">YT</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="logo">JD <span>Cafe</span></a>
+          <p>Crafted with passion, served with love. Since 2018.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#menu">Our Menu</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#order">Order Online</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-newsletter">
+          <h4>Stay Updated</h4>
+          <p>Subscribe for exclusive offers and new flavours.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Your email" required />
+            <button type="submit">&#10140;</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 JD Cafe Official. All rights reserved. | Crafted with &#9749; in Coimbatore</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" aria-label="Back to top">&#8593;</button>
+
+  <script>
+    // Loader
+    window.addEventListener('load', function() {
+      document.getElementById('loader').classList.add('fade-out');
+      setTimeout(function() {
+        document.getElementById('loader').style.display = 'none';
+      }, 500);
+    });
+
+    // Mobile nav
+    document.querySelector('.nav-toggle').addEventListener('click', function() {
+      var expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', !expanded);
+      document.querySelector('.nav-links').classList.toggle('open');
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        document.querySelector('.nav-links').classList.remove('open');
+        document.querySelector('.nav-toggle').setAttribute('aria-expanded', 'false');
+        document.querySelectorAll('.nav-links a').forEach(function(a) { a.classList.remove('active'); });
+        this.classList.add('active');
+      });
+    });
+
+    // Scroll reveal
+    var revealElements = document.querySelectorAll('.reveal, .reveal-delay-1, .reveal-delay-2');
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    revealElements.forEach(function(el) { observer.observe(el); });
+
+    // Counter animation
+    var counters = document.querySelectorAll('.stat-number');
+    var counterObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting && !entry.target.dataset.animated) {
+          entry.target.dataset.animated = 'true';
+          var target = parseInt(entry.target.dataset.count);
+          var current = 0;
+          var increment = Math.ceil(target / 60);
+          var timer = setInterval(function() {
+            current += increment;
+            if (current >= target) { current = target; clearInterval(timer); }
+            entry.target.textContent = current + '+';
+          }, 25);
+        }
+      });
+    }, { threshold: 0.5 });
+    counters.forEach(function(c) { counterObserver.observe(c); });
+
+    // Menu tabs
+    document.querySelectorAll('.menu-tab').forEach(function(tab) {
+      tab.addEventListener('click', function() {
+        document.querySelectorAll('.menu-tab').forEach(function(t) { t.classList.remove('active'); });
+        this.classList.add('active');
+        var category = this.dataset.category;
+        document.querySelectorAll('.menu-item').forEach(function(item) {
+          if (category === 'all' || item.dataset.category === category) {
+            item.style.display = 'flex';
+            setTimeout(function() { item.style.opacity = '1'; }, 10);
+          } else {
+            item.style.opacity = '0';
+            setTimeout(function() { item.style.display = 'none'; }, 300);
+          }
+        });
+      });
+    });
+
+    // Sticky header shadow
+    window.addEventListener('scroll', function() {
+      var header = document.getElementById('site-header');
+      if (window.scrollY > 50) { header.classList.add('scrolled'); }
+      else { header.classList.remove('scrolled'); }
+
+      var btn = document.getElementById('back-to-top');
+      if (window.scrollY > 500) { btn.classList.add('visible'); }
+      else { btn.classList.remove('visible'); }
+    });
+
+    document.getElementById('back-to-top').addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Nav active on scroll
+    var sections = document.querySelectorAll('section[id]');
+    window.addEventListener('scroll', function() {
+      var scrollPos = window.scrollY + 150;
+      sections.forEach(function(section) {
+        var top = section.offsetTop;
+        var height = section.offsetHeight;
+        var id = section.getAttribute('id');
+        if (scrollPos >= top && scrollPos < top + height) {
+          document.querySelectorAll('.nav-links a').forEach(function(a) {
+            a.classList.remove('active');
+            if (a.getAttribute('href') === '#' + id) { a.classList.add('active'); }
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
